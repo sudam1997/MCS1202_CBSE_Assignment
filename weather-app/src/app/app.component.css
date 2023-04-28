@@ -1,0 +1,76 @@
+/* Responsive and Professional CSS for AppComponent */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #cd9696;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+  margin:  auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-20px);
+    opacity: 1;
+  }
+}
+
+/* Example usage of animations on app-header, app-weather, and app-footer components */
+app-header,
+app-weather,
+app-footer {
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+app-header {
+  animation-name: fadeIn;
+}
+
+app-weather {
+  animation-name: slideUp;
+}
+
+/* app-footer {
+  animation-name:;
+} */

@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files
+/* CSS code to enable scrolling for the entire page */
+
+ body {
+  overflow-x: 25%;  /* Add vertical scrollbar when content overflows */
+  height: 100%;  /* Set height of body and html elements to 100% */
+  width:100%;
+} 
+
+body {
+  padding-right: 17px; /* Add padding to accommodate scrollbar width */
+  width:100%
+} 

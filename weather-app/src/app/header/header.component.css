@@ -1,0 +1,66 @@
+
+
+  header {
+    padding: 10px;
+    background-color: hsla(220, 18%, 47%, 0.873);
+    position: relative;
+    overflow:hidden;
+    width:100%
+  }
+
+  .navbar {
+    justify-content: space-between;
+    width:100%
+  }
+
+  .navbar-brand {
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-nav {
+    align-items: center;
+  }
+
+  .nav-item {
+    margin-right: 10px;
+    opacity: 18%;
+    color: #007bff;
+  }
+
+  .nav-link {
+    color: #000;
+    font-weight: bold;
+  }
+
+  .nav-link:hover {
+    color: #007bff;
+  }
+
+  .navbar-toggler {
+    border: none;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-toggler-icon {
+    background-color: #000;
+  }
+
+  /* Animation on hover for navbar brand and items */
+  .navbar-brand:hover {
+    transform: scale(1.1);
+  }
+
+  .navbar-nav .nav-item:hover {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Animation on click for navbar toggler icon */
+  .navbar-toggler:focus {
+    outline: none;
+  }
+
+  .navbar-toggler:hover {
+    transform: rotate(180deg);
+  }

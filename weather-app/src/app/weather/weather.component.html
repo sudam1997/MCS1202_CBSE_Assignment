@@ -1,0 +1,67 @@
+<!-- WeatherComponent HTML template -->
+<div class="table-container">
+  <div class="weather-card">
+    <h3>Current Location</h3>
+    <p>Latitude: {{location?.latitude}}</p>
+    <p>Longitude: {{location?.latitude}}</p>
+    <p>City: {{location.city}}</p>
+  </div>
+
+  <div class="weather-card">
+    <h3>Current Geolocation</h3>
+    <p>Latitude: {{locationJs?.latitude}}</p>
+    <p>Longitude: {{locationJs?.latitude}}</p>
+  </div>
+
+  <div class="weather-card">
+    <div *ngIf="currentWeather" class="weather-container">
+      <h2>Current Weather</h2>
+      <div class="weather-info">
+        <div class="weather-icon">
+          <img src="{{ getWeatherIconUrl(currentWeather.weather[0].icon) }}" alt="Weather Icon">
+        </div>
+        <p class="description"> {{ currentWeather.weather[0].description }}</p>
+        <p class="description">{{currentWeather?.sys?.country}}, {{currentWeather?.name}}</p>
+        <div class="weather-info">
+          <p class="temp">Temperature:{{ currentWeather?.main?.temp}} &#8451;</p>
+          <p>Humidity: {{ currentWeather.main.humidity }}%</p>
+          <p>Pressure: {{ currentWeather.main.pressure }} hPa</p>
+          <p>Wind Speed: {{ currentWeather.wind.speed }} m/s</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="weather-card">
+    <h2>3 Hour Forecast</h2>
+    <ul class="hourly-forecast">
+      <li *ngFor="let weatherForecast of threeHourForecast.list">
+        <p class="time">{{ weatherForecast.dt_txt }}</p>
+        <div class="weather-icon">
+          <img [src]="getWeatherIconUrl(weatherForecast.weather[0].icon)" [alt]="weatherForecast.weather[0].description">
+        </div>
+        <p class="description">{{ weatherForecast.weather[0].description }}</p>
+        <p class="description">{{currentWeather?.sys?.country}}, {{currentWeather?.name}}</p>
+        <p class="temp">Temperature: {{ weatherForecast.main.temp }}°C</p>
+        <p class="humidity">Humidity: {{ weatherForecast.main.humidity }}%</p>
+        <p class="wind-speed">Wind Speed: {{ weatherForecast.wind.speed }} m/s</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="weather-card">
+    <h2>Daily Forecast</h2>
+    <ul class="hourly-forecast">
+      <li>
+        <p class="temp">Coming Soon.....</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sustainability-tips">
+    <h2>Sustainability Tips</h2>
+    <p class="tip">Tip 1: Ride a bike or use public transportation on sunny days to reduce carbon emissions.</p>
+    <p class="tip">Tip 2: Use a reusable water bottle and carry a reusable bag on rainy days to avoid single-use plastics.</p>
+    <!-- Add more sustainability tips as needed -->
+  </div>
+</div>

@@ -1,0 +1,35 @@
+/* Footer styles */
+footer {
+  background-color: #333; /* Set the desired background color */
+  color: #fff; /* Set the desired text color */
+  text-align: center;
+  padding: 20px;
+  position: bottom;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%; /* Added for responsive design */
+  height: 121px; /* Set the desired height */
+  display: flex; /* Add flexbox display for equal distribution of rows */
+  flex-wrap: wrap; /* Wrap the rows if they exceed the height of the footer */
+  justify-content: center; /* Center align the rows horizontally */
+  align-items: center; /* Center align the rows vertically */
+}
+
+footer .container {
+  flex-basis: 100%; /* Set flex basis to 100% for equal distribution of rows */
+  margin-bottom: 20px; /* Add margin bottom for spacing between rows */
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  footer {
+    padding: 10px; /* Decrease padding for smaller screens */
+    font-size: 12px; /* Decrease font size for smaller screens */
+    height: auto; /* Set height to auto for responsiveness */
+  }
+}
